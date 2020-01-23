@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    font-size:18px;
+    font-family: 'Cairo', sans-serif;
+    background: rgb(89, 89, 89);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+input {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    
+}
+
+input[type=text] {
+    box-shadow: 0px 0px 6px 3px rgba(20,20,20,0.2);
+    width: 60%;
+    height: 20px;
+    text-align: left;
+    border:none;
+}
+
+input[type=submit], input[type=button] {
+    float: right;
+
+    box-shadow: 0px 0px 6px 3px rgba(20,20,20,0.2);
+    height: 34px;
+
+}
+
+
+input[type=checkbox] {
+    float: right;
+    margin-top: 1px;
+    height: 35px;
+    border: 1px solid #111;
+}
+
+#taskSubmit {
+    width: 40%;
+    margin-top: -34px;
+    background: cyan;
+}
+
+.deleteTaskBtn {
+    background:lavender;
+    border-radius: 100px;
+    width: 25px;
+    margin-left: 25px;
+    height: 35px;
+}
+
+.deleteTaskBtn:hover {
+    background: red;
+}
+
+#savedTasks {
+    margin: 50px auto;
+    padding-left: auto;
+    padding-right: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    height: auto;
+    text-align: justify;
+    box-shadow: inset 0px 0px 6px 3px rgba(128,128,128,0.3);
+    background: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.unhidden {
+    display: block;
+
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+p {
+    margin: 30px;
+}
+
+
+@media (width:540px) {
+    #container {
+        width: 100%;
+        background: silver;
+        margin: 0 auto;
+    }
+
+    #taskSubmit {
+        margin-top: -56px;
+        width: 40%;
+        background: cyan;
+    }
+    
+}
+
+@media (min-width: 500px) {
+    #container {
+        width: 100%;
+
+    }
+
+    #savedTasks {
+        min-width: 100%;
+    }
+
+    #taskBox {
+        width: 60%;
+        border-bottom: 2px solid rgb(87, 87, 87);
+        padding:5px 0px 5px 5px;
+    }
+
+    #taskSubmit {
+        width: 40%;
+        font-weight: bolder;
+        border-bottom: 2px solid rgb(87, 87, 87);
+    }
+} 
+
+@media (min-width: 760px) {
+    #container {
+       width: 80%;
+       margin: 10px auto;
+    }
+
+    #taskBox {
+        float: none;
+        width: 60%;
+        margin: 0 auto;
+        border: 2px solid rgb(87, 87, 87);
+        display: relative;
+    }
+
+    #taskSubmit {
+        float: none;
+        width: 30%;
+        margin: 20px auto;
+        border: 2px solid rgb(87, 87, 87);
+        display: relative;
+    }
+
+    #toCentre {
+        text-align: center;
+    }
+
+    #savedTasks {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+   
+} 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet"  type="text/css" href="todolist.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do List</title>
+</head>
+<body>
+    <div id="container">
+        <div id="toCenter">
+            <form id="toDoForm" action="#">
+                <input type="text" id="taskBox" autocomplete="off" autofocus placeholder="Enter a task..."/>
+                <input type="submit" id="taskSubmit" value="Create"/> 
+            </form>
+            <div id="savedTasks" class="hidden"></div>
+        </div>
+    </div>
+</body>
+<script src="mustache.js"></script>
+<script src="uuidv4.js"></script>
+<script src="todomodel.js"></script>
+<script src="todoview.js"></script>
+<script src="todocontroller.js"></script>
+<script>
+    (function() {
+        var model = new TaskRepository();
+        var view = new ToDoView(model);
+        var controller = new TaskController(model, view);
+        controller.bindEvents();
+    })();
+</script>
+</html>
